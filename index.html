@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Riya Kundnani | Digital Marketing Specialist</title>
+  <meta name="description" content="Riya Kundnani – Digital Marketing Specialist specializing in Meta Ads, Paid Social, Google Ads, YouTube and LinkedIn. Services, experience, skills, and contact." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0e172a; --muted:#90a3b6; --ink:#e6eef6; --brand:#0ea5e9; --brand-2:#7dd3fc; --ring:rgba(14,165,233,0.4);
+      --radius:18px; --shadow:0 20px 45px rgba(14,165,233,.08), 0 6px 16px rgba(2,6,23,.35);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:linear-gradient(180deg,#0b1220, #0b1220 60%, #0c1323);color:var(--ink);}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .wrap{max-width:var(--max);margin:auto;padding:0 20px}
+
+    /* Top Nav */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.7);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid #152033}
+    .nav .inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#0369a1);display:grid;place-items:center;font-weight:900;box-shadow:var(--shadow)}
+    .nav a{color:var(--ink);opacity:.9}
+    .links{display:none;gap:22px}
+    .cta{padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,var(--brand),#0369a1);color:white;box-shadow:var(--shadow)}
+    @media(min-width:860px){.links{display:flex}}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .blob{position:absolute;inset:auto -120px -160px auto;width:520px;height:520px;background:radial-gradient(closest-side,var(--brand-2),transparent 70%);filter:blur(40px);opacity:.35;pointer-events:none}
+    .hero-grid{display:grid;gap:36px;padding:56px 0;align-items:center}
+    @media(min-width:860px){.hero-grid{grid-template-columns:1.1fr .9fr;padding:84px 0}}
+    .card{background:linear-gradient(180deg,#0e172a,#0b1426);border:1px solid #152033;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:22px}
+    .title{font-size:clamp(26px,3vw,44px);line-height:1.1;margin:0 0 10px}
+    .subtitle{color:var(--muted);margin:0 0 18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#0a162b;border:1px solid #18314f;color:#b7c6d8;font-size:13px}
+    .grid-2{display:grid;gap:14px}
+    @media(min-width:600px){.grid-2{grid-template-columns:1fr 1fr}}
+
+    /* Sections */
+    section{padding:48px 0}
+    section h2{font-size:clamp(22px,2.2vw,30px);margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .panel{background:linear-gradient(180deg,#0d1628,#0b1324);border:1px solid #152033;border-radius:var(--radius)}
+
+    /* Lists */
+    .list{display:grid;gap:14px}
+    .item{padding:16px;border-radius:14px;background:#0a162a;border:1px solid #152033}
+
+    /* Experience Cards */
+    .xp{display:grid;gap:12px;padding:18px;border:1px solid #152033;border-radius:16px;background:linear-gradient(180deg,#0d172b,#0b1426)}
+    .xp h3{margin:0;font-size:18px}
+    .xp .meta{display:flex;flex-wrap:wrap;gap:10px;color:#a5b8cc;font-size:13px}
+    .xp ul{margin:8px 0 0 16px}
+
+    /* Services */
+    .svc-grid{display:grid;gap:16px}
+    @media(min-width:860px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+    .svc{padding:18px;border-radius:16px;background:#081423;border:1px solid #143152}
+    .svc h3{margin:0 0 6px}
+
+    /* Contact */
+    .contact{display:grid;gap:16px}
+    @media(min-width:760px){.contact{grid-template-columns:1fr 1fr}}
+    input,textarea,button{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #203149;background:#0c1a2f;color:#e7f0fa;outline:none}
+    input:focus,textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:#1e3d5f}
+    button{cursor:pointer;background:linear-gradient(135deg,var(--brand),#0369a1);color:white;font-weight:600}
+
+    /* Chips / Skill tags */
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{padding:8px 10px;border-radius:999px;background:#0a162b;border:1px solid #1a324e;color:#c4d4e6;font-size:13px}
+
+    /* Animations */
+    @keyframes rise {from{transform:translateY(16px);opacity:.001} to{transform:none;opacity:1}}
+    .reveal{opacity:0;transform:translateY(16px)}
+    .reveal.show{animation:rise .6s ease forwards}
+
+    /* Footer */
+    footer{padding:36px 0;color:#9fb2c7;border-top:1px solid #152033}
+
+    /* Utility */
+    .row{display:flex;gap:14px;flex-wrap:wrap}
+    .space{height:8px}
+    .sep{height:1px;background:#152033;margin:16px 0}
+    .right{text-align:right}
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="wrap inner">
+      <div class="logo">
+        <div class="badge">RK</div>
+        <strong>Riya Kundnani</strong>
+      </div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Meta Ads Services</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="card pad reveal">
+        <span class="pill">Digital Marketing Specialist • Paid Social</span>
+        <h1 class="title">Helping brands grow with data‑backed <span style="color:var(--brand)">Meta Ads</span> & performance marketing</h1>
+        <p class="subtitle">Strategic and customer‑oriented marketer with 2+ years’ experience across Meta (Facebook/Instagram), Google Ads, LinkedIn, and YouTube. I plan, launch and optimize paid campaigns, analyze performance (CTR, CPM, CPR, ROAS), and collaborate with stakeholders to drive growth.</p>
+        <div class="grid-2">
+          <div class="panel pad">
+            <div class="row"><strong>Riya Kundnani</strong></div>
+            <div class="row muted">Niagara Falls, ON</div>
+            <div class="row"><a href="tel:+12265809934">(226) 580‑9934</a> · <a href="mailto:kundnaniriya1@gmail.com">kundnaniriya1@gmail.com</a></div>
+            <div class="row"><a href="#contact">LinkedIn</a> • <a href="#contact">Get in touch</a></div>
+          </div>
+          <div class="panel pad">
+            <div class="chips">
+              <span class="chip">Meta Ads</span>
+              <span class="chip">Google Ads</span>
+              <span class="chip">YouTube</span>
+              <span class="chip">LinkedIn</span>
+              <span class="chip">A/B Testing</span>
+              <span class="chip">Hootsuite</span>
+              <span class="chip">Stakeholder Mgmt</span>
+              <span class="chip">Video Editing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="panel pad">
+          <h2 style="margin:0 0 8px">What I do</h2>
+          <p class="muted">Full‑funnel paid social strategy, creative feedback loops, audience building, and rigorous performance analysis. I bring together platform best practices and real‑time data to scale what works and cut what doesn’t.</p>
+          <div class="sep"></div>
+          <div class="row">
+            <div class="chip">Campaign Strategy</div>
+            <div class="chip">Audience Segmentation</div>
+            <div class="chip">Budget Allocation</div>
+            <div class="chip">Attribution Basics</div>
+            <div class="chip">Reporting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
+      <h2 class="reveal">Professional Summary</h2>
+      <p class="muted reveal">Strategic and customer‑oriented Digital Marketing Specialist with 2+ years of experience executing and optimizing multi‑channel marketing campaigns across Meta (Facebook/Instagram), Google Ads, LinkedIn, and YouTube. Proven ability to manage paid social initiatives, lead campaign strategy, and collaborate with internal and external stakeholders to drive business growth. Skilled in video editing, performance analysis, and reporting on key metrics, with strong organization in fast‑paced environments. Passionate about data‑backed marketing and social media best practices that align with user behavior and platform trends.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="wrap">
+      <h2 class="reveal">Core Competencies</h2>
+      <div class="panel pad reveal">
+        <div class="chips">
+          <span class="chip">Paid Social Strategy (Meta, YouTube, LinkedIn, Google Ads)</span>
+          <span class="chip">Campaign Execution & Optimization</span>
+          <span class="chip">Stakeholder Management & Client Consulting</span>
+          <span class="chip">Performance Metrics (CTR, CPM, CPR, ROAS)</span>
+          <span class="chip">Video Editing & Visual Design (Canva)</span>
+          <span class="chip">Instagram, Facebook & YouTube Campaigns</span>
+          <span class="chip">Project Management & Collaboration</span>
+          <span class="chip">Hootsuite & Meta Business Suite</span>
+          <span class="chip">A/B Testing, Budget & Placements</span>
+          <span class="chip">Customer‑Oriented Communication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="reveal">Professional Experience</h2>
+
+      <div class="xp reveal">
+        <h3>Digital Marketing Specialist — Accenture, St. Catharines, ON</h3>
+        <div class="meta">Aug 2024 – Present</div>
+        <ul>
+          <li>Developed and executed paid social campaigns across Meta, LinkedIn, and YouTube, achieving 3.5–5.2× ROAS and reducing CPR by ~27%.</li>
+          <li>Collaborated with stakeholders to align goals with brand voice and broader strategy.</li>
+          <li>Edited and optimized creatives using Meta tools (Ads Manager, Business Suite) to improve CTR.</li>
+          <li>Tracked KPIs (CTR, CPM, ROAS) and delivered analysis with data‑driven recommendations.</li>
+          <li>Used Hootsuite and Meta Business Suite for scheduling, monitoring, and engagement.</li>
+          <li>Supported project management: documentation, asset tracking, reporting cadence, stakeholder comms.</li>
+          <li>Consulted clients on platform best practices, improving engagement and cost per conversion.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <h3>Sales Representative — OSL Retail Services, St. Catharines, ON</h3>
+        <div class="meta">Dec 2024 – Present</div>
+        <ul>
+          <li>Proactively engaged clients, providing assistance and product insights.</li>
+          <li>Assessed needs to recommend advanced telecom products effectively.</li>
+          <li>Developed leadership and teamwork, surpassing targets by ~125%.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <h3>Marketing Specialist — OSL Retail Services, Mississauga, ON</h3>
+        <div class="meta">Aug 2023 – Nov 2024</div>
+        <ul>
+          <li>Led Google Chromebook promotion using customer insights to align with marketing strategy.</li>
+          <li>Coordinated with store and marketing teams for consistent messaging and design.</li>
+          <li>Supported seasonal campaign messaging and customer‑oriented service to boost conversions.</li>
+        </ul>
+      </div>
+
+      <div class="xp reveal">
+        <h3>Sales Associate — Bell Canada, Brampton, ON</h3>
+        <div class="meta">Jan 2023 – Jul 2023</div>
+        <ul>
+          <li>Used Salesforce to manage leads, track touchpoints, and improve conversion via consultative selling.</li>
+          <li>Supported product launches aligning frontline goals with campaign objectives.</li>
+          <li>Maintained accurate records and supported contract flows; strengthened retention through upselling.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services (Meta Ads) -->
+  <section id="services">
+    <div class="wrap">
+      <h2 class="reveal">Services — Meta Ads</h2>
+      <p class="muted reveal">End‑to‑end Meta advertising services tailored to growth, from strategy to reporting. Packages are customizable to fit your funnel stage and budget.</p>
+      <div class="svc-grid">
+        <div class="svc reveal">
+          <h3>1) Strategy & Account Setup</h3>
+          <p class="muted">Objective mapping, pixel basics, conversion events, naming conventions, and roadmap.</p>
+          <ul>
+            <li>Audit & opportunity assessment</li>
+            <li>Pixel/events checklist & QA</li>
+            <li>Audience structure & budgets</li>
+          </ul>
+        </div>
+        <div class="svc reveal">
+          <h3>2) Campaign Build & Launch</h3>
+          <p class="muted">Creative specs, placements, and bidding methods aligned to KPIs (CPR/ROAS).</p>
+          <ul>
+            <li>Creative briefs & variants</li>
+            <li>Detailed targeting & exclusions</li>
+            <li>QA & go‑live SOP</li>
+          </ul>
+        </div>
+        <div class="svc reveal">
+          <h3>3) Optimization & Reporting</h3>
+          <p class="muted">Weekly sprints to test, scale, or pause. Clear reporting and next‑step actions.</p>
+          <ul>
+            <li>A/B tests & learning phases</li>
+            <li>Budget pacing & scaling</li>
+            <li>Performance dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="education">
+    <div class="wrap">
+      <h2 class="reveal">Education</h2>
+      <div class="panel pad reveal">
+        <strong>Diploma, Business Marketing</strong>
+        <div class="muted">Sheridan College — Mississauga, ON · Sept 2022 – Apr 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs">
+    <div class="wrap">
+      <h2 class="reveal">Certifications</h2>
+      <div class="list">
+        <div class="item reveal">Canadian Investment Funds Course (IFC) — Mar 2024</div>
+        <div class="item reveal">Certified Professional Sales Associate — May 2024</div>
+        <div class="item reveal">Foundations of Digital Marketing and E‑commerce — Jan 2024</div>
+        <div class="item reveal">Meta Certified Digital Marketing Associate — Oct 2024</div>
+        <div class="item reveal">Google Ads Search Certification — Feb 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Placeholder -->
+  <section id="testimonials">
+    <div class="wrap">
+      <h2 class="reveal">Testimonials</h2>
+      <div class="panel pad reveal">
+        <p class="muted">Testimonials to be presented soon…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <h2 class="reveal">Contact</h2>
+      <div class="contact">
+        <div class="panel pad reveal">
+          <p><strong>Let’s talk about your goals.</strong> Send a quick message and I’ll get back to you.</p>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required>
+            <div class="space"></div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <div class="space"></div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" rows="5" placeholder="What do you need help with?" required></textarea>
+            <div class="space"></div>
+            <button type="submit">Send Message</button>
+            <p id="formNote" class="muted" style="margin-top:8px"></p>
+          </form>
+        </div>
+        <div class="panel pad reveal">
+          <h3>Direct</h3>
+          <p class="muted">Niagara Falls, ON</p>
+          <p><a href="tel:+12265809934">(226) 580‑9934</a><br>
+             <a href="mailto:kundnaniriya1@gmail.com">kundnaniriya1@gmail.com</a></p>
+          <p><a href="#" aria-label="LinkedIn profile">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div>© <span id="year"></span> Riya Kundnani</div>
+        <div class="muted">Built with vanilla HTML/CSS/JS</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON‑LD for basic SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Riya Kundnani",
+    "jobTitle":"Digital Marketing Specialist",
+    "address":{"@type":"PostalAddress","addressLocality":"Niagara Falls","addressRegion":"ON","addressCountry":"CA"},
+    "email":"mailto:kundnaniriya1@gmail.com",
+    "telephone":"+1-226-580-9934",
+    "url":"",
+    "knowsAbout":["Meta Ads","Google Ads","YouTube","LinkedIn","Paid Social","Performance Marketing"]
+  }
+  </script>
+
+  <script>
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target);} });
+    },{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // Simple, no-backend contact handler (prevent default & show note)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (ev)=>{
+      ev.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // You can wire this up to a service like Formspree or EmailJS later.
+      document.getElementById('formNote').textContent = 'Thanks, '+ (data.name||'there') +'! Your message is saved locally. Connect a form backend to enable sending.';
+      try{ localStorage.setItem('contactDraft', JSON.stringify(data)); }catch(e){}
+      form.reset();
+    });
+  </script>
+</body>
+</html>
